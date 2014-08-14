@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+<div style="" class="jumbotron color">
+  <h2><a href="/post/<%= post.id %>"><%= post.name %></a><small><div class='pull-right'><%= time_ago_in_words(post.date) %> ago</div></small></h2>
+  <hr>
+  <h4><%= post.description %></h4>
+  <h5>By <%= post.user.name %></h5>
+</div>
+<% end %>
