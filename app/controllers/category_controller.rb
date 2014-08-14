@@ -2,6 +2,7 @@ class CategoryController < ApplicationController
 
   def index
   @posts = Post.where(:category => params[:id]).order_by(:date.desc)
+  @category = Category.where(:id => params[:id]).first
   end
 
   def new
