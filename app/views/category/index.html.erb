@@ -1,9 +1,13 @@
-<h3>Sorting by category: <%= @posts.first.category.name %></h3>
-<% @posts.each do |post| %>
-<div style="" class="jumbotron color">
-  <h2><a href="/post/<%= post.id %>"><%= post.name %></a><small><div class='pull-right'>Posted in <a href="/category/<%= post.category.id %>"><%= post.category.name %> </a><%= time_ago_in_words(post.date) %> ago</div></small></h2>
-  <hr>
-  <h4><%= post.description %></h4>
-  <h5>By <%= post.user.name %></h5>
-</div>
+<% if @posts.first.nil? %>
+
+<% else %>
+	<h3>Sorting by category: <%= @posts.first.category.name %></h3>
+	<% @posts.each do |post| %>
+	<div style="" class="jumbotron color">
+	  <h2><a href="/post/<%= post.id %>"><%= post.name %></a><small><div class='pull-right'>Posted in <a href="/category/<%= post.category.id %>"><%= post.category.name %> </a><%= time_ago_in_words(post.date) %> ago</div></small></h2>
+	  <hr>
+	  <h4><%= post.description %></h4>
+	  <h5>By <%= post.user.name %></h5>
+	</div>
+	<% end %>
 <% end %>
