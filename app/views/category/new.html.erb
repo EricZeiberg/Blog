@@ -1,0 +1,12 @@
+<%= form_for @category, url: {action: "create"} do |p| %>
+  <%= p.label :name %>:
+  <%= p.text_field :name %><br />
+
+  <%= p.label :description %>:
+  <%= p.text_field :description %><br />
+
+  <%= p.label :order %>:
+  <%= p.number_field :order %><br />
+
+  <%= p.submit %>
+<% end %>

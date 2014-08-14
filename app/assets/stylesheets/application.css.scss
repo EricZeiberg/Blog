@@ -41,10 +41,19 @@ body {
   color: #fff;
 }
 #flash_notice {
-  background-color: #CFC;
+  background-color: #80ff80;
   border: solid 1px #6C6;
+  color: #000000;
+  border-radius: 5px;
 }
 #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+  color: #000000;
+  border-radius: 5px;
+}
+
+ul.nav li {
+display: block;
+margin-bottom: 10px;
 }
