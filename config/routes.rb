@@ -1,4 +1,4 @@
-Rails3MongoidDevise::Application.routes.draw do
+Blog::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
