@@ -9,4 +9,5 @@ Blog::Application.routes.draw do
   get 'post/new', :to => 'post#new'
   get '/post/:id', :to => 'post#index'
   post 'post/create', :to => 'post#create'
+  get '/category/:id', :to => 'category#index'
 end

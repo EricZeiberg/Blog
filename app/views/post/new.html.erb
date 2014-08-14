@@ -5,6 +5,9 @@
   <%= p.label :description %>:
   <%= p.text_field :description %><br />
 
+  <%= p.label :category %>:
+  <%= select :post, :category, Category.all.collect {|c| [ c.name, c.name] } , {include_blank: 'None'}%> <br />
+
   <%= p.label :contents %>:
   <%= p.text_area :contents, :class => "tinymce", :rows => 20, :cols => 120 %>
   <%= tinymce %>

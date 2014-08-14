@@ -8,6 +8,7 @@ class Post
   field :date, :type => Time, :default => ""
 
   belongs_to :user
+  belongs_to :category
 
   def get_name
     :name

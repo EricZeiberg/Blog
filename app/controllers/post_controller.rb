@@ -9,7 +9,8 @@ class PostController < ApplicationController
   end
 
   def create
-    if @post = Post.create(:name => params[:post][:name],:description => params[:post][:description], :contents => params[:post][:contents], :date => Time.now(), :user => current_user)
+    if @post = Post.create(:name => params[:post][:name],:description => params[:post][:description], :contents => params[:post][:contents],
+      :date => Time.now(), :user => current_user, :category => Category.where(:name => params[:post][:category]).first)
       redirect_to '/blog'
     else
 
