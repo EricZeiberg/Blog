@@ -14,4 +14,6 @@ Blog::Application.routes.draw do
   get 'category/new', :to => 'category#new'
   get '/category/:id', :to => 'category#index'
   post 'category/create', :to => 'category#create'
+
+  get 'revisions', :to => "revisions#index"
 end

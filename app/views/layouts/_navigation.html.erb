@@ -1,7 +1,13 @@
-<nav class="navbar navbar-default color" role="navigation">
-  <div class="container-fluid">
+<nav class="navbar navbar-default color " role="navigation">
+  <div class="container-fluid ">
      <a class="navbar-brand" href="/"><p style="color: white">Eric's Blog<p></a>
-       <ul class="navbar-right">
+     <div class='pill navbar-nav'>
+        <ul class="nav nav-pills">
+          <li style="margin-right: 10px; margin-top: 5px;" class="active"><a href="/blog/">Blog</a></li>
+          <li style="margin-right: 10px; margin-top: 5px;" class="active"><a href="/revisions/">Revisions</a></li>
+        </ul>
+      </div>
+       <ul class="navbar-right ">
          <% if current_user.nil? %>
            <p class="navbar-text"><a href="/users/sign_in">Admin</a></p>
         <% else %>

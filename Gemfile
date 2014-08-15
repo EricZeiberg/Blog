@@ -7,6 +7,16 @@ group :assets do
 end
 gem 'jquery-rails'
 gem 'tinymce-rails'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'bootstrap-will_paginate'
+
+gem 'will_paginate_mongoid'
+
+gem 'octokit'
+
+
 gem 'devise'
 gem 'figaro'
 gem 'mongoid'

@@ -1,0 +1,34 @@
+<h1>
+  Revisions to the
+  <%= @name %>
+</h1>
+<hr/>
+<table class="table ">
+  <thead>
+    <tr>
+      <td>SHA</td>
+      <td>Commiter</td>
+      <td>Description</td>
+      <td>Date</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @commits.each do |c| %>
+      <tr>
+        <td>
+          <%= c.sha.slice(0, 8) %>
+        </td>
+        <td>
+          <%= c.author.login  %>
+        </td>
+        <td>
+          <a href="http://github.com/<%= @repo %>/commit/<%= c.sha %>"> <%= c.commit.message %></a>
+        </td>
+        <td>
+          <%= time_ago_in_words(c.commit.author.date) + ' ago' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate(@commits) %>
