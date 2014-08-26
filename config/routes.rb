@@ -10,6 +10,8 @@ Blog::Application.routes.draw do
   get 'post/new', :to => 'post#new'
   get '/post/:id', :to => 'post#index'
   post 'post/create', :to => 'post#create'
+  get '/post/:id/edit', :to => 'post#edit'
+  put '/post/:id/update', :to => 'post#update'
 
   get 'category/new', :to => 'category#new'
   get '/category/:id', :to => 'category#index'

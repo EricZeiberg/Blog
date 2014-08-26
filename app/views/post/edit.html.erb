@@ -1,0 +1,15 @@
+<%= form_for @post, url: {action: "update"} do |p| %>
+  <%= p.label :name %>:
+  <%= p.text_field :name %><br />
+
+  <%= p.label :description %>:
+  <%= p.text_field :description %><br />
+
+  <%= p.label :category %>:
+  <%= collection_select :post, :category, Category.all, :name, :name, :prompt => true %> <br />
+
+  <%= p.label :contents %>:
+  <%= p.text_area :contents, :class => "tinymce", :rows => 20, :cols => 120 %>
+  <%= tinymce %>
+  <%= p.submit %>
+<% end %>

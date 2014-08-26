@@ -3,6 +3,7 @@ bin/
 Gemfile.lock
 config/database.yml
 config/mongoid.yml
+config/enviroment.rb
 update/
 
 *.espressostorage
