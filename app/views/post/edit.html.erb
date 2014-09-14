@@ -6,7 +6,7 @@
   <%= p.text_field :description %><br />
 
   <%= p.label :category %>:
-  <%= collection_select :post, :category, Category.all, :name, :name, :prompt => true %> <br />
+  <%= collection_select :post, :category, Category.all, :name, :name, :prompt => true, :selected => @post.category %> <br />
 
   <%= p.label :contents %>:
   <%= p.text_area :contents, :class => "tinymce", :rows => 20, :cols => 120 %>
